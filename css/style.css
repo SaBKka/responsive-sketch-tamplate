@@ -1,0 +1,109 @@
+:root{
+  --Nteal: 0,117,143;
+  --Nmaroon: 148,38,68;
+  --liGhteal: 2,123,150;
+  --white: 255,255,255;
+  --Nso: 0;
+  --transpno: 1;
+}
+@font-face {
+  src: url(../fonts/Cardo-Italic.ttf);
+  font-family: myfonts;
+}
+/*საწყისები*/
+html,body,h1,h2,h3,h4,h5,h6
+{
+  margin: var(--Nso);
+  font-family: myfonts;
+}
+/*საერთო*/
+.row,
+#resources .col,
+#resources .content .col .btn{
+  display: flex;
+}
+#resources .content .col img,
+#resources .content .col svg{
+  width: 100px;
+}
+/*კერძო*/
+header{
+  text-align: center;
+  padding: 40px 0;
+}
+#resources .content .java{
+  background-color: rgba(var(--Nteal),var(--transpno)); 
+}
+#resources .content .db{
+  background-color: rgba(var(--Nmaroon),var(--transpno)); 
+}
+#resources .content .free-trial{
+  background-color: rgba(var(--liGhteal),var(--transpno)); 
+}
+#resources .wrapper{
+  width: 90%;
+}
+#resources{
+  justify-content: center;
+}
+#resources .col{
+  width: 31%;
+}
+.content{
+  justify-content: space-between;
+}
+#resources .col{
+  flex-direction: column;
+}
+#resources .col{
+  align-items: center;
+}
+#resources .content .free-trial .cta-btn{
+    transform: translateY(85px);
+}
+#resources .content .free-trial .text-date{
+  transform: translateY(110px)scale(0.9);
+}
+#resources .content .text-date{
+  background-color: rgba(var(--white));
+  transform: translateY(60px) translateX(0.2px) scale(0.9);
+  padding: 10px;
+}
+#resources .content .col a{
+  text-decoration: none;
+  background-color: rgba(var(--Nteal),var(--transpno));
+  color: rgba(var(--white));
+  transform: translateY(35px);
+  padding: 10px 35px;
+} 
+/*responsive*/
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: gainsboro;
+  }
+  #resources .content{
+    flex-direction: column;
+    width: 100%;
+  }
+  #resources .content .col{
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  header .textline{
+    color: rgba(var(--white));
+    background-color: rgba(var(--Nteal));
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px 35px;
+    cursor: pointer;
+  }
+  #resources .content .text-date{
+    border-radius: 22%;
+  }
+  #resources .content .col a{
+    border-radius: 50%;
+  }
+  #resources .content .col{
+    border-radius: 15%;
+  }
+}
